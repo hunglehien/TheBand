@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: #fff !important;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* width: 1349px; */
+}
+
+.clear {
+    clear: both;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: calc(100%/3);
+}
+
+.col-full {
+    width: 100%;
+}
+
+#header {
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    left: 0;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav>li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav>li:hover>a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav>li>a {
+    display: inline-block;
+    padding: 0 24px;
+    line-height: 46px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+.subnav {
+    display: none;
+    z-index: 1;
+}
+
+#nav>li:hover .subnav {
+    position: absolute;
+    display: block;
+    background-color: white;
+    min-width: 160px;
+}
+
+.subnav>li {
+    display: block;
+    list-style: none;
+    padding: 8px 16px;
+}
+
+.subnav>li>a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.subnav>li:hover {
+    background-color: #ccc;
+}
+
+#search {
+    float: right;
+    color: white;
+    line-height: 46px;
+    width: 62px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#bars {
+    float: right;
+    color: white;
+    line-height: 46px;
+    width: 62px;
+    text-align: center;
+    display: none;
+}
+
+#search:hover {
+    background-color: #f44336;
+}
+
+
+/* Sliders */
+
+#sliders {
+    clear: both;
+    max-width: 100%;
+    background-color: rgb(63, 60, 60);
+    position: relative;
+}
+
+#sliders img {
+    width: 100%;
+}
+
+.text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 32px 16px;
+    color: white;
+}
+
+.text h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+/* The Band */
+
+.content-section {
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 0 112px;
+    margin: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.content-section>h2 {
+    margin: 10px 0;
+}
+
+.content-section>p {
+    margin: 15px 0;
+}
+
+.content-section>h2 {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.content-section .sub-heading {
+    font-style: italic;
+    opacity: 0.8;
+    text-align: center;
+    font-size: 15px;
+}
+
+.content-section .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.member-list {
+    margin-top: 47px;
+}
+
+.member-list .member-item {
+    float: left;
+    text-align: center;
+}
+
+.member-list .member-item {
+    width: calc(100% / 3);
+}
+
+.member-item .member-img {
+    width: 154px;
+}
+
+.tourdates {
+    background-color: #000;
+}
+
+.tourdates .content-section .sub-heading,
+.tourdates .content-section>h2 {
+    color: white;
+}
+
+.tickets-list {
+    background-color: #fff;
+}
+
+.tickets-list li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1px;
+    font-size: 15px;
+    color: #757575;
+    list-style: none;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    margin-left: 16px;
+    padding: 3px 4px;
+}
+
+.tickets-list .quantity {
+    float: right;
+    background-color: #000;
+    color: #fff;
+    margin-right: 16px;
+    width: 24px;
+    line-height: 22px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: -3px;
+}
+
+.place-list {
+    margin-top: 32px;
+    margin-left: -8px;
+    margin-right: -8px;
+    font-size: 15px;
+}
+
+.place-items {
+    padding: 0 8px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-info {
+    background-color: white;
+    padding: 16px;
+}
+
+.place-info .heading {
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-info .time {
+    color: #757575;
+    margin-top: 15px;
+}
+
+.place-info .description {
+    margin-top: 15px
+}
+
+.place-info .btn-buy {
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.place-info .btn-buy:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+
+/* CONTACT */
+
+.contact-section {
+    padding-top: 32px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 2.2;
+}
+
+.contact-info i[class*=fa] {
+    width: 30px;
+}
+
+.contact-form .form-control {
+    padding: 10px 5px;
+    width: 100%;
+}
+
+.btn-send {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border-style: none;
+    float: right;
+}
+
+.btn-send:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+
+img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.social-lists a {
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.social-lists a:hover {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.copyright {
+    color: rgb(0, 0, 0, 0.6);
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.copyright a {
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.copyright a:hover {
+    cursor: pointer;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay {
+    width: 900px;
+    max-width: 100%;
+}
+
+.modal-header {
+    position: relative;
+    height: 131px;
+    background-color: #009688;
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-size: 25px;
+}
+
+.modal-header h2 .fa-suitcase {
+    font-size: 30px;
+}
+
+.modal-header .btn-close__heading {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 18px 17px;
+    font-weight: 400;
+}
+
+.modal-header .btn-close__heading:hover {
+    background-color: #ccc;
+    cursor: pointer;
+    color: black;
+}
+
+.modal-body {
+    background-color: var(--white-color);
+    padding: 0 16px;
+}
+
+.modal-body label {
+    display: inline-block;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.modal-body__input {
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-body .btn-pay {
+    background-color: #009688;
+    color: var(--white-color);
+    margin: 16px 0;
+    padding: 16px;
+    border-style: none;
+    width: 100%;
+}
+
+.modal-body .btn-pay:hover {
+    opacity: 0.8;
+}
+
+.modal-footer {
+    text-align: right;
+    padding: 15px 0 31px;
+    line-height: 1.5;
+}
+
+.modal-footer a {
+    color: #2196F3;
+}
